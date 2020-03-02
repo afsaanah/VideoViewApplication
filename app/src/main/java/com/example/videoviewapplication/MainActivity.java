@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         pauseIv.setVisibility(View.VISIBLE);
+                        pauseIv.postDelayed(new Runnable() {
+                            public void run() {
+                                pauseIv.setVisibility(View.INVISIBLE);
+                            }
+                        }, 3000);
                     }
                 });
 
